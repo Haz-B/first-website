@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0e0f2cff;
+    font-family: rockwell;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(60deg);
+    }
+}
+@keyframes oscillate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+
+}
+
+
+.defs {
+    display: none;
+}
+
+
+header {
+
+    position: sticky;
+    display: flex;
+    background: linear-gradient(to right, #ff417d80, #78d7ff80);
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+
+    >a,
+    >a:visited,
+    >a:link,
+    >a:active,
+    >a:focus {
+        text-justify: justify;
+        text-align: center;
+        text-decoration: none;
+        -webkit-text-stroke: #f8ffb8ff 0.025rem;
+        color: transparent;
+        font-size: 2rem;
+        background: linear-gradient(to bottom right, #ff417dff, #78d7ffff);
+        background-clip: text;
+        margin-left: .5rem;
+    }
+
+    >a:hover {
+        -webkit-text-stroke: #f8ffb8ff 0.04rem;
+    }
+
+    .login {
+        justify-self: flex-end;
+        position: relative;
+        width: clamp(10%, 15em, 25%);
+
+        .login_button {
+            position: absolute;
+            text-align: center;
+            width: 75%;
+            height: 2rem;
+            align-self: center;
+            background: linear-gradient(to bottom, #ff417dff, #78d7ffff);
+            border: solid #f8ffb8ff 0.125rem;
+            border-radius: 10%/50%;
+            right: 10%;
+            inset-block: 30%;
+            /* margin-right: min(25%, 4em); */
+
+            >a,
+            >a:visited,
+            >a:link,
+            >a:active,
+            >a:focus {
+
+                text-justify: justify;
+                text-wrap: balance;
+                text-decoration: none;
+                -webkit-text-stroke: #f8ffb8ff 0.05rem;
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: transparent;
+                background: linear-gradient(to bottom right, #42004eff, #144491ff);
+                background-clip: text;
+            }
+        }
+
+        /* .WJ_Logo_Brander {
+
+            align-self: center;
+            content: url("WJ_Logo_Brander.svg") ;
+            height: 2em;
+
+        }
+        .WJ_Logo_Handle {
+
+            align-self: center;
+            text-align: center;
+            content: url("WJ_Logo_Brander_Frame.svg") ;
+            height: 1em;
+        } */
+    }
+
+}
+
+.Compass {
+
+    position: sticky;
+    width: 20rem;
+    height: 20rem;
+    margin-inline: auto;
+    margin-top: 1rem;
+    transition-property: stroke-width, transform;
+
+
+    svg {
+        display: block;
+        position: absolute;
+        height: 20rem;
+        width: 20rem;
+        margin: auto;
+        transition-property: transform, stroke-width;
+        stroke-width: 3;
+        transition-duration: .5s;
+    }
+
+    .Compass_Needle {
+        transform-origin: center;
+        top: 2.6rem;
+        height: 14.8rem;
+        z-index: 2;
+
+        fill: #10908e;
+        stroke: #f8ffb8;
+    }
+
+    .Compass_Inner {
+        transform-origin: center;
+        top: 2.6rem;
+        height: 14.8rem;
+        z-index: 1;
+
+        fill: #78d7ff;
+        fill-opacity: 0.25;
+    }
+
+    .Compass_Planets {
+        z-index: 4;
+        fill: #d61a88;
+        stroke: #f8ffb8;
+    }
+
+    .Compass_Ring {
+        z-index: 3;
+
+        fill: #ff417d;
+        fill-opacity: 0.25;
+        stroke: #f8ffb8;
+    }
+}
+
+
+.Welcome {
+    display: flex;
+    flex-direction: column;
+
+    h1,
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-justify: justify;
+        text-align: center;
+        text-decoration: none;
+        -webkit-text-stroke: #f8ffb899 0.05rem;
+        color: transparent;
+        font-size: 2.5rem;
+        background: linear-gradient(to bottom right, #ff417ddd, #78d7ffdd);
+        background-clip: text;
+        margin-left: .5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        order: 3;
+    }
+
+    .start {
+        text-align: center;
+        height: 2rem;
+        align-self: center;
+        background: linear-gradient(to bottom, #ff417dcc, #78d7ffcc);
+        border: solid #f8ffb8ff 0.125rem;
+        border-radius: 5%/40%;
+        margin-block: 2rem;
+        right: 10%;
+        inset-block: 30%;
+        transition-property: width, height;
+        width: 15rem;
+        transition: .5s;
+        order: 4;
+
+        >a,
+        >a:visited,
+        >a:link,
+        >a:active,
+        >a:focus {
+            display: block;
+            text-justify: justify;
+            text-wrap: balance;
+            text-decoration: none;
+            -webkit-text-stroke: #f8ffb8ff 0.05rem;
+            transition-property: font-size;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: transparent;
+            background: linear-gradient(to bottom right, #42004eff, #144491ff);
+            background-clip: text;
+            margin: auto;
+            transition: .25s;
+        }
+    }
+
+    .start:hover {
+
+        width: 20rem;
+        height: 3rem;
+        border-width: 0.2rem;
+        transition: .25s;
+
+        >a,
+        >a:visited,
+        >a:link,
+        >a:active,
+        >a:focus {
+            font-size: 2rem;
+            -webkit-text-stroke-width: 0.075rem;
+            transition: .25s;
+        }
+
+        ~.Compass {
+            transform: scale(105%);
+            svg {
+                stroke-width: 6;
+                transition: 2s;
+            }
+
+            .Compass_Needle {
+                transform: rotate(1turn);
+                animation: 4s 2s infinite ease oscillate;
+            }
+
+            .Compass_Planets {
+                transform: rotate(-.5turn);
+                animation: 4s 2s infinite reverse spin;
+            }
+
+            .Compass_Inner, .Compass_Ring {
+                fill-opacity: .375;
+            }
+        }
+    }
+}
+
+.Destinations {
+
+
+
+}
