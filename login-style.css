@@ -76,6 +76,10 @@ header {
                 background: linear-gradient(to bottom right, #42004eff, #144491ff);
                 background-clip: text;
             }
+
+            >a:hover {
+                -webkit-text-stroke: #f8ffb8ff 0.1rem;
+            }
         }
     }
 }
@@ -86,6 +90,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vw;
 
     h1 {
         margin-top: 2rem;
@@ -141,6 +146,11 @@ header {
                 justify-self: flex-end;
                 font-weight: bold;
                 padding-left: .24rem;
+
+                border-style: solid;
+                border-width: 0.2rem;
+                border-image-source: linear-gradient(to bottom right, #ff417ddd, #78d7ffdd);
+                border-image-slice: 1;
             }
 
             #select-branch {
@@ -149,10 +159,19 @@ header {
                 height: 100%;
                 text-align: center;
                 font-weight: bold;
+
+                border-style: solid;
+                border-width: 0.2rem;
+                border-image-source: linear-gradient(to bottom right, #ff417ddd, #78d7ffdd);
+                border-image-slice: 1;
             }
             #agreement {
                 height: 50%;
 
+                border-style: solid;
+                border-width: 0.2rem;
+                border-image-source: linear-gradient(to bottom right, #ff417ddd, #78d7ffdd);
+                border-image-slice: 1;
             }
 
         }
@@ -166,9 +185,52 @@ header {
             background: linear-gradient(to bottom, #ff417dff, #78d7ffff);
             border: solid #f8ffb8ff 0.125rem;
             border-radius: 10%/25%;
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: bold;
+            -webkit-text-stroke: #f8ffb899 0.02rem;
+            transition: .25s;
+        }
+
+        #submit:hover {
+            -webkit-text-stroke: #f8ffb899 0.075rem;
+            transform: scale(1.25);
         }
     }
+
+    }
+
+    footer {
+        display: flex;
+        background: linear-gradient(to right, #ff417d80, #78d7ff80);
+        justify-content: space-around;
+        align-items: center;
+        height: 3rem;
+        width: 100vw;
+        margin-top: 0;
+
+        div {
+            >a,
+            >a:visited,
+            >a:link,
+            >a:active,
+            >a:focus {
+                text-justify: justify;
+                text-align: center;
+                text-decoration: none;
+                -webkit-text-stroke: #f8ffb8ff 0.025rem;
+                color: transparent;
+                font-size: 1.5rem;
+                background: linear-gradient(to bottom right, #ff417dff, #78d7ffff);
+                background-clip: text;
+                margin-left: .5rem;
+            }
+
+            >a:hover {
+                -webkit-text-stroke: #f8ffb8ff 0.04rem;
+            }
+
+        }
+
+
 
     }

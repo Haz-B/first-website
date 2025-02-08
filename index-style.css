@@ -313,3 +313,39 @@ header {
     }
 
 }
+
+footer {
+    display: flex;
+    background: linear-gradient(to right, #ff417d80, #78d7ff80);
+    justify-content: space-around;
+    align-items: center;
+    height: 3rem;
+    width: 100vw;
+    margin-top: 0;
+
+    div {
+        >a,
+        >a:visited,
+        >a:link,
+        >a:active,
+        >a:focus {
+            text-justify: justify;
+            text-align: center;
+            text-decoration: none;
+            -webkit-text-stroke: #f8ffb8ff 0.025rem;
+            color: transparent;
+            font-size: 1.5rem;
+            background: linear-gradient(to bottom right, #ff417dff, #78d7ffff);
+            background-clip: text;
+            margin-left: .5rem;
+        }
+
+        >a:hover {
+            -webkit-text-stroke: #f8ffb8ff 0.04rem;
+        }
+
+    }
+
+
+
+}
