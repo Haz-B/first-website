@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0e0f2cff;
+    font-family: rockwell;
+
+}
+
+
+
+header {
+
+    position: fixed;
+    display: flex;
+    background: linear-gradient(to right, #ff417d80, #78d7ff80);
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 100vw;
+    margin-top: 0;
+    >a,
+    >a:visited,
+    >a:link,
+    >a:active,
+    >a:focus {
+        text-justify: justify;
+        text-align: center;
+        text-decoration: none;
+        -webkit-text-stroke: #f8ffb8ff 0.025rem;
+        color: transparent;
+        font-size: 2rem;
+        background: linear-gradient(to bottom right, #ff417dff, #78d7ffff);
+        background-clip: text;
+        margin-left: .5rem;
+    }
+
+
+    >a:hover {
+        -webkit-text-stroke: #f8ffb8ff 0.04rem;
+    }
+
+    .login {
+        justify-self: flex-end;
+        position: relative;
+        width: clamp(10%, 15em, 25%);
+
+        .login_button {
+            position: absolute;
+            text-align: center;
+            width: 75%;
+            height: 2rem;
+            align-self: center;
+            background: linear-gradient(to bottom, #ff417dff, #78d7ffff);
+            border: solid #f8ffb8ff 0.125rem;
+            border-radius: 10%/50%;
+            right: 10%;
+            inset-block: 30%;
+
+            >a,
+            >a:visited,
+            >a:link,
+            >a:active,
+            >a:focus {
+
+                text-justify: justify;
+                text-wrap: balance;
+                text-decoration: none;
+                -webkit-text-stroke: #f8ffb8ff 0.05rem;
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: transparent;
+                background: linear-gradient(to bottom right, #42004eff, #144491ff);
+                background-clip: text;
+            }
+        }
+    }
+}
+
+.main {
+
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-justify: justify;
+        text-align: center;
+        text-decoration: none;
+        -webkit-text-stroke: #f8ffb899 0.05rem;
+        color: transparent;
+        font-size: 2.5rem;
+        background: linear-gradient(to bottom right, #ff417ddd, #78d7ffdd);
+        background-clip: text;
+        margin-left: .5rem;
+    }
+
+    fieldset {
+        display:flex;
+        flex-direction: column;
+        justify-content:space-around;
+        height: 50vh;
+        width: 70vh;
+        background: linear-gradient(to right, #ff417d40, #78d7ff40);
+        border-style: solid;
+        border-width: 0.3rem;
+        border-image-source: linear-gradient(to bottom right, #ff417ddd, #78d7ffdd);
+        border-image-slice: 1;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-inline: 25%;
+
+
+            label {
+                text-justify: justify;
+                text-align: center;
+                text-decoration: none;
+                -webkit-text-stroke: #f8ffb8ff 0.025rem;
+                color: transparent;
+                font-size: 1.5rem;
+                background: linear-gradient(to bottom right, #ff417dff, #78d7ffff);
+                background-clip: text;
+                margin-left: .5rem;
+                margin-right: 1rem;
+            }
+
+            input {
+                background: #f8ffb8ff;
+                height: 100%;
+                width: 75%;
+                border-radius: 20%;
+                /* flex-grow: 1; */
+                justify-self: flex-end;
+                font-weight: bold;
+                padding-left: .24rem;
+            }
+
+            #select-branch {
+                /* flex-grow: 1; */
+                width: 75%;
+                height: 100%;
+                text-align: center;
+                font-weight: bold;
+            }
+            #agreement {
+                height: 50%;
+
+            }
+
+        }
+
+        #submit {
+            margin-inline: auto;
+            text-align: center;
+            width: 25%;
+            height: 2rem;
+            align-self: center;
+            background: linear-gradient(to bottom, #ff417dff, #78d7ffff);
+            border: solid #f8ffb8ff 0.125rem;
+            border-radius: 10%/25%;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    }

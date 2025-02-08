@@ -7,6 +7,7 @@
 body {
     background-color: #0e0f2cff;
     font-family: rockwell;
+
 }
 
 @keyframes spin {
@@ -40,13 +41,14 @@ body {
 
 header {
 
-    position: sticky;
+    position: fixed;
     display: flex;
     background: linear-gradient(to right, #ff417d80, #78d7ff80);
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-
+    width: 100vw;
+    margin-top: 0;
     >a,
     >a:visited,
     >a:link,
@@ -102,21 +104,6 @@ header {
                 background-clip: text;
             }
         }
-
-        /* .WJ_Logo_Brander {
-
-            align-self: center;
-            content: url("WJ_Logo_Brander.svg") ;
-            height: 2em;
-
-        }
-        .WJ_Logo_Handle {
-
-            align-self: center;
-            text-align: center;
-            content: url("WJ_Logo_Brander_Frame.svg") ;
-            height: 1em;
-        } */
     }
 
 }
@@ -181,7 +168,8 @@ header {
 .Welcome {
     display: flex;
     flex-direction: column;
-
+    height: 100vh;
+    padding-top: 3rem;
     h1,
     h2 {
         margin-top: 2rem;
@@ -229,12 +217,12 @@ header {
             text-justify: justify;
             text-wrap: balance;
             text-decoration: none;
-            -webkit-text-stroke: #f8ffb8ff 0.05rem;
+            -webkit-text-stroke: #f8ffb8ff 0.02rem;
             transition-property: font-size;
             font-size: 1.4rem;
             font-weight: bold;
             color: transparent;
-            background: linear-gradient(to bottom right, #42004eff, #144491ff);
+            background: linear-gradient(to bottom right, #300030ff, #003080ff);
             background-clip: text;
             margin: auto;
             transition: .25s;
@@ -283,7 +271,45 @@ header {
 }
 
 .Destinations {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    div {
+        text-align: center;
+        height: 3rem;
+        align-self: center;
+        background: linear-gradient(to bottom, #ff417dcc, #78d7ffcc);
+        border: solid #f8ffb8ff 0.125rem;
+        border-radius: 5%/40%;
+        margin-block: 3rem;
+        right: 10%;
+        inset-block: 30%;
+        transition-property: width, height;
+        width: 15rem;
+        transition: .5s;
+        order: 4;
+        display: flex;
+    }
 
-
+    a,
+    a:visited,
+    a:link,
+    a:active,
+    a:focus {
+        display: block;
+        text-justify: justify;
+        text-wrap: balance;
+        text-decoration: none;
+        -webkit-text-stroke: #f8ffb8aa 0.025rem;
+        transition-property: font-size;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: transparent;
+        background: linear-gradient(to bottom right, #300030ff, #003080ff);
+        background-clip: text;
+        margin: auto;
+        transition: .25s;
+    }
 
 }
